@@ -52,6 +52,7 @@
                 <p><br></p>
             </div>
         </div>
+
     </div>
 </template>
 
@@ -63,12 +64,12 @@
                 let maison = document.getElementById('maison').value;
                 let role = document.getElementById('role').value;
                 let password = document.getElementById('Password2').value;
-                this.$emit('sign-in', nomRegister, password, maison, role);
+                this.$emit('register', nomRegister, password, maison, role);
             },
             connect(){
                 let nomConnect = document.getElementById('nom1').value;
                 let password = document.getElementById('Password1').value;
-                this.$emit('sign-up', nomConnect, password);
+                this.$emit('connect', nomConnect, password);
             }
         }
     }

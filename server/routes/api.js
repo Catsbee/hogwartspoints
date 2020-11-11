@@ -30,7 +30,7 @@ router.post('/register',  ( async(req, res) => {
         username : req.body.username,
         password : await bcrypt.hash(req.body.password,10),
         userhouse : req.body.userhouse,
-        prof : req.body.prof
+        prof : req.body.prof==='Professeur'
     }
     let test = await client.query({
         text:'SELECT * FROM users WHERE username=$1',
@@ -60,20 +60,20 @@ router.post('/connect',(async (req, res) => {
         values:[input.username]
     })
     if (test.rows.length === 0){
-        res.json({message : "Username non existant"})
+        res.json({message : "Username non existant", success:false})
         return
     }
     if (!await bcrypt.compare(req.body.password, test.rows[0].password))
     {
-        res.json({message : "Mauvais password"})
+        res.json({message : "Mauvais password", success:false})
         return
     }
     if (req.session.userId >= 0){
-        res.json({message : "Utilisateur deja connecte"})
+        res.json({message : "Utilisateur deja connecte", success:true})
         return
     }
     req.session.userId = test.rows[0].userid
-    res.json({message : "Utilisateur connecte"})
+    res.json({message : "Utilisateur connecte", success:true})
 }))
 
 router.post('/logout', ((req, res) => {
