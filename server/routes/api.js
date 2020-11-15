@@ -17,6 +17,7 @@ router.use(((req, res, next) => {
     if (typeof req.session.userId === 'undefined')
     {
         req.session.userId = -1;
+        req.session.prof = false;
     }
     next()
 }))
@@ -26,6 +27,10 @@ router.get('/self', (async(req, res) => {
     res.json({user : user.rows});
 
 }))
+
+router.get('/isprof', (req,res)=>{
+    res.json(req.session.prof)
+})
 
 router.post('/register',  ( async (req, res) => {
     let input = {
@@ -75,6 +80,7 @@ router.post('/connect',(async (req, res) => {
         return
     }
     req.session.userId = test.rows[0].userid
+    req.session.prof=test.rows[0].prof
     res.json({message : "Utilisateur connecte", success:true})
 }))
 
