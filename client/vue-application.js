@@ -1,11 +1,22 @@
 const Home = window.httpVueLoader('./components/Home.vue')
 const Pageperso = window.httpVueLoader('./components/Pageperso.vue')
 const Register = window.httpVueLoader('./components/Register.vue')
+const Serdaigle = window.httpVueLoader('./components/maisonSerdaigle.vue')
+const Poufsouffle = window.httpVueLoader('./components/maisonPoufsouffle.vue')
+const Gryffondor = window.httpVueLoader('./components/maisonGryffondor.vue')
+const Serpentard = window.httpVueLoader('./components/maisonSerpentard.vue')
+const PageProf = window.httpVueLoader('./components/PageProf.vue')
 
 const routes = [
     { path: '/', component: Home},
     { path: '/pageperso', component: Pageperso},
-    { path: '/register', component: Register}
+    { path: '/register', component: Register},
+    { path: '/maisonGryffondor', component: Gryffondor},
+    { path: '/maisonSerpentard', component: Serpentard},
+    { path: '/maisonPoufsouffle', component: Poufsouffle},
+    { path: '/maisonSerdaigle', component: Serdaigle},
+    { path: '/PageProf', component: PageProf}
+
 ]
 
 const router = new VueRouter({
