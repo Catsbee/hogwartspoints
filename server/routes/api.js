@@ -122,6 +122,60 @@ router.post('/newtache', (async(req, res)=>{
     res.json(result.rows)
 }))
 
+router.put('/assignTache', async(req, res)=>{
+    if (!req.session.prof){
+        res.json({message : 'erreur : seul un enseignant peut faire cette operation'})
+        return
+    }
+    let input = {
+        userid : req.body.userid,
+        tacheid : req.body.tacheid
+    }
+    //verification existance utilisateur
+    let user = await client.query({
+            text : 'SELECT * FROM users WHERE userid=$1',
+            values : [input.userid]
+    })
+    if(user.rows.length === 0){
+        res.json({message : 'erreur : utilisateur non existant'})
+        return
+    }
+    //verification existance tache
+    let task = await client.query({
+        text : 'SELECT * FROM taches WHERE tacheid=$1',
+        values : [input.tacheid]
+    })
+    if (task.rows.length === 0){
+        res.json({message : 'erreur : tache non existante'})
+        return
+    }
+    //verification que la tache n'est pas dans le tableau de taches
+
+    //append la tache au tableau de taches
+    if (user.rows[0].taches === null)
+    {
+        user = await client.query({
+            text : "UPDATE users SET taches = '{}' WHERE userid=$1 RETURNING *",
+            values : [input.userid]
+        })
+    }
+    else
+    {
+        for (let i = 0; i < user.rows[0].taches.length; i++){
+            if (user.rows[0].taches[i].toString() === input.tacheid.toString()){
+                res.json({message : "erreur : tache deja assignee a l'utilisateur selectionne"})
+            }
+        }
+    }
+    user = await client.query({
+        text : "UPDATE users SET taches = array_append(taches,$1) WHERE userid=$2 RETURNING *",
+        values : [input.tacheid, input.userid]
+    })
+    res.json({message : "Tache correctement assignee"})
+})
+
+
+
 router.get('/getTache', async(req,res)=>{
     let result=await client.query('SELECT * FROM taches')
     res.json(result.rows)
