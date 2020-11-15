@@ -5,7 +5,7 @@ const Serdaigle = window.httpVueLoader('./components/maisonSerdaigle.vue')
 const Poufsouffle = window.httpVueLoader('./components/maisonPoufsouffle.vue')
 const Gryffondor = window.httpVueLoader('./components/maisonGryffondor.vue')
 const Serpentard = window.httpVueLoader('./components/maisonSerpentard.vue')
-const PageProf = window.httpVueLoader('./components/PageProf.vue')
+const prof = window.httpVueLoader('./components/prof.vue.vue')
 
 const routes = [
     { path: '/', component: Home},
@@ -15,7 +15,7 @@ const routes = [
     { path: '/maisonSerpentard', component: Serpentard},
     { path: '/maisonPoufsouffle', component: Poufsouffle},
     { path: '/maisonSerdaigle', component: Serdaigle},
-    { path: '/PageProf', component: PageProf}
+    { path: '/prof.vue', component: prof}
 
 ]
 
