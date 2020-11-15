@@ -123,6 +123,7 @@ router.post('/newtache', (async(req, res)=>{
 }))
 
 router.put('/assignTache', async(req, res)=>{
+    //verification si c'est bien le prof de connecte
     if (!req.session.prof){
         res.json({message : 'erreur : seul un enseignant peut faire cette operation'})
         return
@@ -149,7 +150,6 @@ router.put('/assignTache', async(req, res)=>{
         res.json({message : 'erreur : tache non existante'})
         return
     }
-    //verification que la tache n'est pas dans le tableau de taches
 
     //append la tache au tableau de taches
     if (user.rows[0].taches === null)
@@ -174,7 +174,37 @@ router.put('/assignTache', async(req, res)=>{
     res.json({message : "Tache correctement assignee"})
 })
 
-
+router.post('/getUser', async (req, res)=>{
+    let input = {
+        userid : req.body.userid
+    }
+    let user = await client.query({
+        text : 'SELECT * FROM users WHERE userid=$1',
+        values : [input.userid]
+    })
+    if(user.rows.length === 0){
+        res.json(null)
+        return
+    }
+    let tasks = []
+    let total = 0
+    if (user.rows[0].taches === null) {
+        res.json({tasks : tasks, total: total})
+        return
+    }
+    let tache = null
+    for (let i = 0; i < user.rows[0].taches.length; i++){
+        tache = await client.query({
+            text : 'SELECT * FROM taches WHERE tacheid=$1',
+            values : [user.rows[0].taches[i]]
+        })
+        if (tache.rows.length !== 0){
+            tasks.push(user.rows[0].taches[i])
+            total += tache.rows[0].tachepoints
+        }
+    }
+    res.json({tasks : tasks, total: total})
+})
 
 router.get('/getTache', async(req,res)=>{
     let result=await client.query('SELECT * FROM taches')
