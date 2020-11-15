@@ -21,11 +21,13 @@ router.use(((req, res, next) => {
     next()
 }))
 
-router.post('/self', ((req, res) => {
-    res.json({user : req.session.userId});
+router.get('/self', (async(req, res) => {
+    let user = await client.query({text: 'SELECT * FROM users WHERE userid=$1', values:[req.session.userId]})
+    res.json({user : user.rows});
+
 }))
 
-router.post('/register',  ( async(req, res) => {
+router.post('/register',  ( async (req, res) => {
     let input = {
         username : req.body.username,
         password : await bcrypt.hash(req.body.password,10),
@@ -85,5 +87,38 @@ router.post('/logout', ((req, res) => {
     res.json({message : "Utilisateur deconnecte"})
 }))
 
+router.get('/eleve', (async (req, res) =>{
+    let user = await client.query({text: 'SELECT * FROM users WHERE prof=$1', values:[false]})
+    res.json(user.rows)
+}))
+
+router.post('/newtache', (async(req, res)=>{
+    let input = {
+        description : req.body.tachedes,
+        nomtache : req.body.tachenom,
+        points : req.body.tachepoints
+    }
+    let test = await client.query({
+        text:'SELECT * FROM taches WHERE tachenom=$1',
+        values:[input.nomtache]
+    })
+    if (test.rows.length > 0){
+        res.json({message : "Tache déjà créer"})
+        return
+    }
+    let number = await client.query({
+        text:'SELECT * FROM taches'
+    })
+    let result = await client.query({
+        text:'INSERT INTO taches (tachedes, tachenom, tachepoints, tacheid) VALUES ($1, $2, $3, $4) RETURNING *',
+        values:[input.description, input.nomtache, input.points, number.rows.length]
+    })
+    res.json(result.rows)
+}))
+
+router.get('/getTache', async(req,res)=>{
+    let result=await client.query('SELECT * FROM taches')
+    res.json(result.rows)
+})
 
 module.exports = router
