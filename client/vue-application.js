@@ -5,7 +5,7 @@ const Serdaigle = window.httpVueLoader('./components/maisonSerdaigle.vue')
 const Poufsouffle = window.httpVueLoader('./components/maisonPoufsouffle.vue')
 const Gryffondor = window.httpVueLoader('./components/maisonGryffondor.vue')
 const Serpentard = window.httpVueLoader('./components/maisonSerpentard.vue')
-const prof = window.httpVueLoader('./components/prof.vue.vue')
+const prof = window.httpVueLoader('./components/prof.vue')
 
 const routes = [
     { path: '/', component: Home},
@@ -15,7 +15,7 @@ const routes = [
     { path: '/maisonSerpentard', component: Serpentard},
     { path: '/maisonPoufsouffle', component: Poufsouffle},
     { path: '/maisonSerdaigle', component: Serdaigle},
-    { path: '/prof.vue', component: prof}
+    { path: '/prof', component: prof}
 
 ]
 
@@ -47,6 +47,11 @@ var app = new Vue({
             let res=await axios.post('/api/logout')
             alert(res.data.message)
             location.replace('http://localhost:3000/?#/register')
+            console.log(res)
+        },
+        async newtache(description, nomtache, points){
+            let res = await axios.post('api/newtache', {tachedes: description, tachenom: nomtache, tachepoints: points})
+
             console.log(res)
         }
     }
