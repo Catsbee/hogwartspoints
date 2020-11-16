@@ -29,7 +29,6 @@
         <input type="text" v-model="tache.tachedes">
         <input type="number" v-model="tache.tachepoints">
         <button @click="newtache">Valider</button>
-        <button data-toggle="modal" data-target="#exampleModal">Afficher el modal</button>
       </div>
       <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
