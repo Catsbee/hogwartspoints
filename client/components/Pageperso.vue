@@ -39,7 +39,7 @@
                     <input type="text" class="form-control" id="pointstache" placeholder="Points attribuer">
                 </div>
                 <div class="col">
-                    <button @click="newtache" class="btn btn-outline-info">Créer</button>
+                    <button class="btn btn-outline-info">Créer</button>
                 </div>
             </div>
         </form>
@@ -52,6 +52,13 @@
             logout(){
                 this.$emit('logout');
             }
+        },
+        async mounted(){
+          let user = await axios.get('/api/self');
+          if (user.data.user.length === 0 || (user.data.user[0].prof)){
+            location.replace("http://localhost:3000/?#/")
+            alert("Thou shall not pass")
+          }
         }
     }
 </script>

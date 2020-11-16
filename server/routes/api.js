@@ -90,6 +90,7 @@ router.post('/logout', ((req, res) => {
         return
     }
     req.session.userId = -1
+    req.session.prof= false
     res.json({message : "Utilisateur deconnecte"})
 }))
 

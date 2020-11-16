@@ -16,7 +16,6 @@ const routes = [
     { path: '/maisonPoufsouffle', component: Poufsouffle},
     { path: '/maisonSerdaigle', component: Serdaigle},
     { path: '/prof', component: prof}
-
 ]
 
 const router = new VueRouter({
@@ -34,6 +33,11 @@ var app = new Vue({
             let res= await axios.post('/api/connect', {username: username, password: password})
             alert(res.data.message)
             if(res.data.success){
+                let user = await axios.get('/api/self')
+                user = user.data.user[0].prof
+                if (user)
+                    location.replace('http://localhost:3000/?#/prof')
+                else
                 location.replace('http://localhost:3000/?#/pageperso')
             }
             console.log(res)

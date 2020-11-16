@@ -1,6 +1,9 @@
 <template>
     <div class="container">
       <div>
+        <div class="row">
+          <button @click="logout" class="btn btn-outline-info">Se tej</button>
+        </div>
         <label for="tableTache" class="h3 mt-3 mb-3">Table des tâches</label>
         <table class="table" id="tableTache">
           <thead class="thead-dark">
@@ -72,6 +75,11 @@
             }
         },
       async mounted (){
+        let prof = await axios.get('/api/isProf');
+          if (!(prof.data )){
+            location.replace("http://localhost:3000/?#/")
+            alert("Thou shall not pass")
+          }
           this.tasks = await axios.get('/api/getTache');
           this.tasks = this.tasks.data
           this.students = await axios.get('/api/eleve')
@@ -92,6 +100,9 @@
           },
           test(t){
               this.tacheId = t
+          },
+          logout(){
+            this.$emit('logout');
           }
         }
     }
