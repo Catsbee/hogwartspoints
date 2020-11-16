@@ -211,4 +211,72 @@ router.get('/getTache', async(req,res)=>{
     res.json(result.rows)
 })
 
+router.get('/housepoints', async(req, res)=>{
+    let gryf = await client.query("SELECT * FROM users WHERE userhouse='Gryffondor'")
+    let serd = await client.query("SELECT * FROM users WHERE userhouse='Serdaigle'")
+    let poufs = await client.query("SELECT * FROM users WHERE userhouse='Poufsouffle'")
+    let serp = await client.query("SELECT * FROM users WHERE userhouse='Serpentard'")
+
+    let gryfPoint = 0
+    let  serdPoint = 0
+    let poufPoint = 0
+    let serpPoint = 0
+    let tache = null
+
+    for (let i = 0; i < gryf.rows.length; i++){
+        if (gryf.rows[i].taches !== null) {
+            for (let j = 0; j < gryf.rows[i].taches.length; j++){
+                tache = await client.query({
+                    text : "SELECT * FROM taches WHERE tacheid=$1",
+                    values : [gryf.rows[i].taches[j]]
+                })
+                gryfPoint += tache.rows[0].tachepoints
+            }
+        }
+    }
+    for (let i = 0; i < serd.rows.length; i++){
+        if (serd.rows[i].taches !== null) {
+            for (let j = 0; j < serd.rows[i].taches.length; j++) {
+                tache = await client.query({
+                    text: "SELECT * FROM taches WHERE tacheid=$1",
+                    values: [serd.rows[i].taches[j]]
+                })
+                serdPoint += tache.rows[0].tachepoints
+            }
+        }
+    }
+    for (let i = 0; i < poufs.rows.length; i++){
+        if (poufs.rows[i].taches !== null)
+        {
+            for (let j = 0; j < poufs.rows[i].taches.length; j++){
+                tache = await client.query({
+                    text : "SELECT * FROM taches WHERE tacheid=$1",
+                    values : [poufs.rows[i].taches[j]]
+                })
+                poufPoint += tache.rows[0].tachepoints
+            }
+        }
+
+    }
+    for (let i = 0; i < serp.rows.length; i++){
+        if (serp.rows[i].taches !== null) {
+            for (let j = 0; j < serp.rows[i].taches.length; j++) {
+                tache = await client.query({
+                    text: "SELECT * FROM taches WHERE tacheid=$1",
+                    values: [serp.rows[i].taches[j]]
+                })
+                serpPoint += tache.rows[0].tachepoints
+            }
+        }
+    }
+    res.json({
+            gryffondor : gryfPoint,
+            serdaigle:serdPoint,
+            serpentard:serpPoint,
+            poufsouffle:poufPoint
+    })
+})
+
+
+
 module.exports = router
