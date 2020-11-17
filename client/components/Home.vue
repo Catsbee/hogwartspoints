@@ -1,6 +1,6 @@
 <template>
     <div>
-        <div class="jumbotron jumbotron-fluid change">
+        <div class="jumbotron jumbotron-fluid change text-center">
             <div class="container">
                 <div id="titre">
                     <h1>Hogwarts Point</h1>
@@ -101,7 +101,7 @@
 </script>
 <style>
     .change{
-        background-image:url("https://static.hitek.fr/img/42/2017/01/fb_shpphft.jpg");
+        background-image:url("https://s2.qwant.com/thumbr/0x0/e/f/3f282dabe5bee77ca0c0f71861f563dbc2038f3b4da4fb4aa98dadb657b89c/hogwartsblog-1525112612664_1280w.jpg?u=http%3A%2F%2Fassets1.ignimgs.com%2F2018%2F04%2F30%2Fhogwartsblog-1525112612664_1280w.jpg&q=0&b=1&p=0&a=1");
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
@@ -109,6 +109,7 @@
     }
     #titre{
         color:white;
-        mix-blend-mode: difference;
+        text-shadow: #000000 1px 1px, #000000 -1px 1px, #000000 -1px -1px, #000000 1px -1px;
+
     }
 </style>

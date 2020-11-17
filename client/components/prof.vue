@@ -1,4 +1,13 @@
 <template>
+  <div>
+    <div class="jumbotron jumbotron-fluid changeProf text-center">
+      <div class="container">
+        <div id="titre">
+          <h1>Hogwarts Point</h1>
+          <p>Bienvenue dans votre compteur de points façon Poudlard</p>
+        </div>
+      </div>
+    </div>
     <div class="container">
       <div>
         <div class="row">
@@ -16,13 +25,13 @@
           </tr>
           </thead>
           <tbody>
-            <tr v-for="task in tasks">
-              <th scope="row">{{task.tacheid}}</th>
-              <th scope="row">{{task.tachenom}}</th>
-              <th scope="row">{{task.tachedes}}</th>
-              <th scope="row">{{task.tachepoints}}</th>
-              <th scope="row"><button @click="test(task.tacheid)" class="btn btn-outline-secondary" data-toggle="modal" data-target="#exampleModal">Attribuer la tache</button></th>
-            </tr>
+          <tr v-for="task in tasks">
+            <th scope="row">{{task.tacheid}}</th>
+            <th scope="row">{{task.tachenom}}</th>
+            <th scope="row">{{task.tachedes}}</th>
+            <th scope="row">{{task.tachepoints}}</th>
+            <th scope="row"><button @click="test(task.tacheid)" class="btn btn-outline-secondary" data-toggle="modal" data-target="#exampleModal">Attribuer la tache</button></th>
+          </tr>
           </tbody>
         </table>
       </div>
@@ -58,6 +67,8 @@
         </div>
       </div>
     </div>
+  </div>
+
 </template>
 <script>
     module.exports = {
@@ -107,3 +118,16 @@
         }
     }
 </script>
+<style>
+  .changeProf{
+    background-image:url("https://s2.qwant.com/thumbr/0x0/c/3/a348122743922055476bf7135f227dcf37e4d4ad0b8075ee32e13dcddce263/Salle_des_profs.png?u=http%3A%2F%2Fimg1.wikia.nocookie.net%2F__cb20131024124844%2Fharrypotter%2Ffr%2Fimages%2Ff%2Ffe%2FSalle_des_profs.png&q=0&b=1&p=0&a=1");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+  }
+  #titre{
+    color:white;
+    text-shadow: #000000 1px 1px, #000000 -1px 1px, #000000 -1px -1px, #000000 1px -1px;
+  }
+</style>

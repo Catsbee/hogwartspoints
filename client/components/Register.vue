@@ -1,59 +1,71 @@
 <template>
-    <div class="container">
-        <div class="col-md-6">
-            <div id="signin">
-                <form>
-                    <div class="form-group">
-                        <h2>Sign in</h2>
-                        <label for="nom1">Nom</label>
-                        <input type="email" class="form-control" id="nom1" aria-describedby="nameHelp">
-                        <small id="namelHelp" class="form-text text-muted">Veuillez rentrer votre prénom suivit de votre nom. Exemple "Harry Potter"</small>
-                    </div>
-                    <div class="form-group">
-                        <label for="Password1">Mot de passe</label>
-                        <input type="password" class="form-control" id="Password1">
-                    </div>
-                    <button @click="connect" class="btn btn-outline-info">Se connecter</button>
-                </form>
+    <div>
+        <div class="jumbotron jumbotron-fluid changeReg text-center">
+            <div class="container">
+                <div id="titre">
+                    <h1>Vous avez reçu votre lettre</h1>
+                    <h3>Veuillez vous inscrire ou vous connecter</h3>
+                </div>
+
             </div>
         </div>
-
-        <div class="col-md-6">
-            <div id="signup">
-                <form>
-                    <div class="form-group">
-                        <h2>Sign Up</h2>
-                        <label for="nom2">Nom</label>
-                        <input type="email" class="form-control" id="nom2" aria-describedby="nameHelp">
-                        <small id="nameHelp" class="form-text text-muted">Veuillez rentrer votre prénom suivit de votre nom. Exemple "Harry Potter"</small>
-                    </div>
-                    <div class="form-group">
-                        <label for="maison">Maison</label>
-                        <select class="form-control" id="maison">
-                            <option>Poufsouffle</option>
-                            <option>Serpentard</option>
-                            <option>Serdaigle</option>
-                            <option>Gryffondor</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="role">Role</label>
-                        <select class="form-control" id="role">
-                            <option>Professeur</option>
-                            <option>Elève</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="Password2">Password</label>
-                        <input type="password" class="form-control" id="Password2">
-                    </div>
-                    <button @click="register" class="btn btn-outline-info">S'enregistrer</button>
-                </form>
-                <p><br></p>
+        <div class="container">
+            <div class="col-md-6">
+                <div id="signin">
+                    <form>
+                        <div class="form-group">
+                            <h2>Sign in</h2>
+                            <label for="nom1">Nom</label>
+                            <input type="email" class="form-control" id="nom1" aria-describedby="nameHelp">
+                            <small id="namelHelp" class="form-text text-muted">Veuillez rentrer votre prénom suivit de votre nom. Exemple "Harry Potter"</small>
+                        </div>
+                        <div class="form-group">
+                            <label for="Password1">Mot de passe</label>
+                            <input type="password" class="form-control" id="Password1">
+                        </div>
+                        <button @click="connect" class="btn btn-outline-info">Se connecter</button>
+                    </form>
+                </div>
             </div>
-        </div>
 
+            <div class="col-md-6">
+                <div id="signup">
+                    <form>
+                        <div class="form-group">
+                            <h2>Sign Up</h2>
+                            <label for="nom2">Nom</label>
+                            <input type="email" class="form-control" id="nom2" aria-describedby="nameHelp">
+                            <small id="nameHelp" class="form-text text-muted">Veuillez rentrer votre prénom suivit de votre nom. Exemple "Harry Potter"</small>
+                        </div>
+                        <div class="form-group">
+                            <label for="maison">Maison</label>
+                            <select class="form-control" id="maison">
+                                <option>Poufsouffle</option>
+                                <option>Serpentard</option>
+                                <option>Serdaigle</option>
+                                <option>Gryffondor</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="role">Role</label>
+                            <select class="form-control" id="role">
+                                <option>Professeur</option>
+                                <option>Elève</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="Password2">Password</label>
+                            <input type="password" class="form-control" id="Password2">
+                        </div>
+                        <button @click="register" class="btn btn-outline-info">S'enregistrer</button>
+                    </form>
+                    <p><br></p>
+                </div>
+            </div>
+
+        </div>
     </div>
+
 </template>
 
 <script>
@@ -74,3 +86,17 @@
         }
     }
 </script>
+
+<style>
+    .changeReg{
+        background-image:url("https://s2.qwant.com/thumbr/0x0/4/d/8e6ec41e3a9a5c2deb7b8177cdaa966a09cc21babc57653a5df334f0a7b1c3/41782243poudlard2-7599a-png.png?u=http%3A%2F%2Fs1.e-monsite.com%2F2009%2F07%2F12%2F03%2F41782243poudlard2-7599a-png.png&q=0&b=1&p=0&a=1");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+
+    }
+    #titre{
+        color:white;
+        text-shadow: #000000 1px 1px, #000000 -1px 1px, #000000 -1px -1px, #000000 1px -1px;
+    }
+</style>
