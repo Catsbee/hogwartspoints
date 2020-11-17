@@ -43,7 +43,7 @@
         text-shadow: #000000 1px 1px, #000000 -1px 1px, #000000 -1px -1px, #000000 1px -1px;
     }
     .serdaigle{
-        background-image: url("https://www.buy-backdrop.com/bmz_cache/6/6b55fdd3d753393baf3ba853289dee90.image.234x300.jpg");
+        background-image: url("https://www.buy-backdrop.com/bmz_cache/6/6b55fdd3d753393baf3ba853289dee90.image.624x798.jpg");
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;

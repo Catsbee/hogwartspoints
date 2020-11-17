@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="reg">
         <div class="jumbotron jumbotron-fluid changeReg text-center">
             <div class="container">
                 <div id="titre">
@@ -9,59 +9,65 @@
 
             </div>
         </div>
-        <div class="container">
-            <div class="col-md-6">
-                <div id="signin">
-                    <form>
-                        <div class="form-group">
-                            <h2>Sign in</h2>
-                            <label for="nom1">Nom</label>
-                            <input type="email" class="form-control" id="nom1" aria-describedby="nameHelp">
-                            <small id="namelHelp" class="form-text text-muted">Veuillez rentrer votre prénom suivit de votre nom. Exemple "Harry Potter"</small>
+        <div class="container ">
+            <div class="card mb-3">
+                <div class="card-body">
+                    <div class="col-md-6">
+                        <div id="signin">
+                            <form>
+                                <div class="form-group">
+                                    <h2>Sign in</h2>
+                                    <label for="nom1">Nom</label>
+                                    <input type="email" class="form-control" id="nom1" aria-describedby="nameHelp">
+                                    <small id="namelHelp" class="form-text text-muted">Veuillez rentrer votre prénom suivit de votre nom. Exemple "Harry Potter"</small>
+                                </div>
+                                <div class="form-group">
+                                    <label for="Password1">Mot de passe</label>
+                                    <input type="password" class="form-control" id="Password1">
+                                </div>
+                                <button @click="connect" class="btn btn-outline-info">Se connecter</button>
+                            </form>
                         </div>
-                        <div class="form-group">
-                            <label for="Password1">Mot de passe</label>
-                            <input type="password" class="form-control" id="Password1">
+                    </div>
+                    <div class="col-md-6">
+                        <div id="signup">
+                            <form>
+                                <div class="form-group">
+                                    <h2>Sign Up</h2>
+                                    <label for="nom2">Nom</label>
+                                    <input type="email" class="form-control" id="nom2" aria-describedby="nameHelp">
+                                    <small id="nameHelp" class="form-text text-muted">Veuillez rentrer votre prénom suivit de votre nom. Exemple "Harry Potter"</small>
+                                </div>
+                                <div class="form-group">
+                                    <label for="maison">Maison</label>
+                                    <select class="form-control" id="maison">
+                                        <option>Poufsouffle</option>
+                                        <option>Serpentard</option>
+                                        <option>Serdaigle</option>
+                                        <option>Gryffondor</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="role">Role</label>
+                                    <select class="form-control" id="role">
+                                        <option>Professeur</option>
+                                        <option>Elève</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="Password2">Password</label>
+                                    <input type="password" class="form-control" id="Password2">
+                                </div>
+                                <button @click="register" class="btn btn-outline-info">S'enregistrer</button>
+                            </form>
+                            <p><br></p>
                         </div>
-                        <button @click="connect" class="btn btn-outline-info">Se connecter</button>
-                    </form>
+                    </div>
                 </div>
             </div>
 
-            <div class="col-md-6">
-                <div id="signup">
-                    <form>
-                        <div class="form-group">
-                            <h2>Sign Up</h2>
-                            <label for="nom2">Nom</label>
-                            <input type="email" class="form-control" id="nom2" aria-describedby="nameHelp">
-                            <small id="nameHelp" class="form-text text-muted">Veuillez rentrer votre prénom suivit de votre nom. Exemple "Harry Potter"</small>
-                        </div>
-                        <div class="form-group">
-                            <label for="maison">Maison</label>
-                            <select class="form-control" id="maison">
-                                <option>Poufsouffle</option>
-                                <option>Serpentard</option>
-                                <option>Serdaigle</option>
-                                <option>Gryffondor</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label for="role">Role</label>
-                            <select class="form-control" id="role">
-                                <option>Professeur</option>
-                                <option>Elève</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label for="Password2">Password</label>
-                            <input type="password" class="form-control" id="Password2">
-                        </div>
-                        <button @click="register" class="btn btn-outline-info">S'enregistrer</button>
-                    </form>
-                    <p><br></p>
-                </div>
-            </div>
+
+
 
         </div>
     </div>
@@ -98,5 +104,11 @@
     #titre{
         color:white;
         text-shadow: #000000 1px 1px, #000000 -1px 1px, #000000 -1px -1px, #000000 1px -1px;
+    }
+    .reg{
+        background-image:url("https://bdbulle.files.wordpress.com/2008/08/achtergrond.jpg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
     }
 </style>

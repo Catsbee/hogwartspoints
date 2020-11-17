@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="perso">
         <div class="jumbotron jumbotron-fluid changePerso text-center">
             <div class="container">
                 <div id="titre">
@@ -10,48 +10,56 @@
             </div>
         </div>
         <div class="container">
-            <div class="row">
-                <button @click="logout" class="btn btn-outline-info">Se tej</button>
+            <div class="card mb-3">
+                <div class="card-body">
+                    <div class="row">
+                        <button @click="logout" class="btn btn-outline-info">Se tej</button>
+                    </div>
+                    <h2><br>Bienvenue user.username</h2>
+                    <h2><br>Tableau personnel</h2>
+                    <table class="table table-hover">
+                        <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Tâche</th>
+                            <th scope="col">Description</th>
+                            <th scope="col">Points</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>Mark</td>
+                            <td>Otto</td>
+                            <td>points</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <form>
+                        <div class="form-row">
+                            <div class="col">
+                                <input type="text" class="form-control" id="nomtache" placeholder="Nom de la tache">
+                            </div>
+                            <div class="col">
+                                <input type="text" class="form-control" id="descriptiontache" placeholder="Description de la tache">
+                            </div>
+                            <div class="col">
+                                <input type="text" class="form-control" id="pointstache" placeholder="Points attribuer">
+                            </div>
+                            <div class="col">
+                                <button class="btn btn-outline-info">Créer</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
             </div>
 
-            <h2><br>Bienvenue user.username</h2>
-            <h2><br>Tableau personnel</h2>
-            <table class="table table-hover">
-                <thead>
-                <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">Tâche</th>
-                    <th scope="col">Description</th>
-                    <th scope="col">Points</th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr>
-                    <th scope="row">1</th>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>points</td>
-                </tr>
-                </tbody>
-            </table>
 
 
-            <form>
-                <div class="form-row">
-                    <div class="col">
-                        <input type="text" class="form-control" id="nomtache" placeholder="Nom de la tache">
-                    </div>
-                    <div class="col">
-                        <input type="text" class="form-control" id="descriptiontache" placeholder="Description de la tache">
-                    </div>
-                    <div class="col">
-                        <input type="text" class="form-control" id="pointstache" placeholder="Points attribuer">
-                    </div>
-                    <div class="col">
-                        <button class="btn btn-outline-info">Créer</button>
-                    </div>
-                </div>
-            </form>
+
+
+
         </div>
     </div>
 
@@ -85,5 +93,11 @@
     #titre{
         color:white;
         text-shadow: #000000 1px 1px, #000000 -1px 1px, #000000 -1px -1px, #000000 1px -1px;
+    }
+    .perso{
+        background-image: url("https://bdbulle.files.wordpress.com/2008/08/achtergrond.jpg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
     }
 </style>

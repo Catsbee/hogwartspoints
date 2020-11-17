@@ -41,7 +41,7 @@
         text-shadow: #000000 1px 1px, #000000 -1px 1px, #000000 -1px -1px, #000000 1px -1px;
     }
     .poufsouffle{
-        background-image: url("https://s1.qwant.com/thumbr/0x0/8/7/7ecdf40f072b32a002d57d0c5ebf3c7631d00fa99a5108114cd435fb347170/yellow-gold-soft-leather-background.jpg?u=https%3A%2F%2Fwww.photohdx.com%2Fimages%2F2015%2F12%2Fyellow-gold-soft-leather-background.jpg&q=0&b=1&p=0&a=1");
+        background-image: url("https://wallpapercave.com/wp/PtJxpRl.jpg");
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
