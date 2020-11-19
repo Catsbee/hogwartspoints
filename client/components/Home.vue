@@ -67,16 +67,16 @@
                         <br><br>
                     </div>
                     <div class="progress">
-                        <div class="progress-bar bg-success" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                        <div class="progress-bar bg-success" role="progressbar" :style="{width : ((100*housepoints.serpentard)/maxpoints).toString()+'%'}" :aria-valuenow="housepoints.serpentard" aria-valuemin="0" :aria-valuemax="maxpoints">{{housepoints.serpentard}}</div>
                     </div>
                     <div class="progress">
-                        <div class="progress-bar bg-info" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                        <div class="progress-bar bg-info" role="progressbar" :style="{width : ((100*housepoints.serdaigle)/maxpoints).toString()+'%'}" :aria-valuenow="housepoints.serdaigle" aria-valuemin="0" :aria-valuemax="maxpoints">{{housepoints.serdaigle}}</div>
                     </div>
                     <div class="progress">
-                        <div class="progress-bar bg-warning" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                        <div class="progress-bar bg-warning" role="progressbar" :style="{width : ((100*housepoints.poufsouffle)/maxpoints).toString()+'%'}" :aria-valuenow="housepoints.poufsouffle" aria-valuemin="0" :aria-valuemax="maxpoints">{{housepoints.poufsouffle}}</div>
                     </div>
                     <div class="progress">
-                        <div class="progress-bar bg-danger" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                        <div class="progress-bar bg-danger" role="progressbar" :style="{width : ((100*housepoints.gryffondor)/maxpoints).toString()+'%'}" :aria-valuenow="housepoints.gryffondor" aria-valuemin="0" :aria-valuemax="maxpoints">{{housepoints.gryffondor}}</div>
                     </div>
                     <div>
                         <br><br>
@@ -104,11 +104,6 @@
                 </div>
                 <img src="../assets/logo_allhouse.png" class="card-img-bottom" alt="...">
             </div>
-
-
-
-
-
         </div>
     </div>
 
@@ -126,7 +121,14 @@
                 tasks : [],
                 students : [],
                 eleve : 'qwerty2',
-                tacheId : "1"
+                tacheId : "1",
+                housepoints : {
+                  gryffondor: 0,
+                  serdaigle: 0,
+                  serpentard: 0,
+                  poufsouffle: 0
+                },
+              maxpoints : 100
             }
         },
         async mounted (){
@@ -134,6 +136,11 @@
             this.tasks = this.tasks.data
             this.students = await axios.get('/api/eleve')
             this.students = this.students.data
+            let pts = await axios.get('/api/housepoints')
+            console.log(pts.data)
+            this.housepoints = pts.data
+            this.maxpoints = Math.max(this.housepoints.gryffondor,this.housepoints.serdaigle, this.housepoints.serpentard, this.housepoints.poufsouffle)
+            console.log(this.maxpoints)
         },
         methods :{
 
