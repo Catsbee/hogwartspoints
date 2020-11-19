@@ -21,7 +21,6 @@
                             sont le rouge et l'or. Et notre salle commune se trouve au sommet de la tour de
                             Gryffondor. Gryffondor est tout simplement la meilleure maison de Poudlard !
                             Seuls les plus hardis et les plus forts sont envoyés ici, comme notamment Albus Dumbledore ! </p>
-                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
                     </div>
                 </div>
             </div>
@@ -49,5 +48,6 @@
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
+        background-attachment: fixed;
     }
 </style>

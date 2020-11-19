@@ -22,7 +22,7 @@
                             peuvent parfois être très drôles ! Amuse-toi, par exemple, à faire croire aux autres
                             élèves que tu as accès à une immense collection de sortilèges et tu verras vite que
                             plus personne n'osera te voler ta trousse !</p>
-                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+
                     </div>
                 </div>
 
@@ -50,6 +50,7 @@
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
+        background-attachment: fixed;
     }
 
 </style>

@@ -38,7 +38,6 @@
                                 <div class="card-body">
                                     <h5 class="card-title">Poufsouffle</h5>
                                     <p class="card-text">Equilibre, Loyauté, Constance, Patiance</p>
-                                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
                                 </div>
                             </div>
                             <div class="card">
@@ -46,7 +45,6 @@
                                 <div class="card-body">
                                     <h5 class="card-title">Serdaigle</h5>
                                     <p class="card-text">Sagesse, Discernement, Erudition, Curiosité</p>
-                                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
                                 </div>
                             </div>
                             <div class="card">
@@ -54,7 +52,6 @@
                                 <div class="card-body">
                                     <h5 class="card-title">Serpentard</h5>
                                     <p class="card-text">Malice, Adresse, Détermination</p>
-                                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
                                 </div>
                             </div>
                             <div class="card">
@@ -62,7 +59,6 @@
                                 <div class="card-body">
                                     <h5 class="card-title">Gryffondor</h5>
                                     <p class="card-text">Courage, Hardiesse, Force d'Esprit</p>
-                                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
                                 </div>
                             </div>
                         </div>
@@ -168,6 +164,7 @@
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
+        background-attachment: fixed;
     }
 
 

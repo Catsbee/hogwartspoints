@@ -20,7 +20,6 @@
                             Gare à ceux qui nous cherchent des noises ! À l’image de notre emblème, le blaireau, nous
                             nous défendrons et défendrons vaillamment nos amis et nos proches contre tout ennemi.
                             Personne ne nous fait peur.</p>
-                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
                     </div>
                 </div>
             </div>
@@ -45,5 +44,6 @@
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
+        background-attachment: fixed;
     }
 </style>
