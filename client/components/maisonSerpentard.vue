@@ -23,6 +23,7 @@
                             élèves que tu as accès à une immense collection de sortilèges et tu verras vite que
                             plus personne n'osera te voler ta trousse !</p>
                         <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                      <h3 class="text-center">Total des points de la maison : {{housepoints}}</h3>
                       <table class="table" id="tableTache">
                         <thead class="thead-dark">
                         <tr>
@@ -49,7 +50,8 @@
 module.exports = {
   data(){
     return {
-      students : []
+      students : [],
+      housepoints : 0
     }
   },
   async mounted(){
@@ -69,6 +71,8 @@ module.exports = {
       }
     }
     this.students = student
+    let pts = await axios.get('/api/housepoints');
+    this.housepoints = pts.data.serpentard
   },
   methods : {
 

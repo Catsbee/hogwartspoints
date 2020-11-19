@@ -22,7 +22,7 @@
                             bon nous semble et de dire ce que nous pensons. Les gens différents ne nous
                             impressionnent pas. Au contraire, nous savons les apprécier à leur juste valeur.</p>
 
-
+                      <h3 class="text-center">Total des points de la maison : {{housepoints}}</h3>
                       <table class="table" id="tableTache">
                         <thead class="thead-dark">
                         <tr>
@@ -53,7 +53,8 @@
   module.exports = {
     data(){
       return {
-        students : []
+        students : [],
+        housepoints : 0
       }
     },
     async mounted(){
@@ -73,6 +74,8 @@
         }
       }
       this.students = student
+      let pts = await axios.get('/api/housepoints');
+      this.housepoints = pts.data.serdaigle
     },
     methods : {
 

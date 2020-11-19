@@ -22,6 +22,7 @@
                             Gryffondor. Gryffondor est tout simplement la meilleure maison de Poudlard !
                             Seuls les plus hardis et les plus forts sont envoyés ici, comme notamment Albus Dumbledore ! </p>
                         <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                      <h3 class="text-center">Total des points de la maison : {{housepoints}}</h3>
                       <table class="table" id="tableTache">
                         <thead class="thead-dark">
                         <tr>
@@ -48,7 +49,8 @@
 module.exports = {
   data(){
     return {
-      students : []
+      students : [],
+      housepoints : 0
     }
   },
   async mounted(){
@@ -68,6 +70,8 @@ module.exports = {
       }
     }
     this.students = student
+    let pts = await axios.get('/api/housepoints');
+    this.housepoints = pts.data.gryffondor
   },
   methods : {
 
