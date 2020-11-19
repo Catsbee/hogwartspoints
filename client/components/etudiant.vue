@@ -35,22 +35,6 @@
                       </tr>
                       </tbody>
                     </table>
-                    <form>
-                        <div class="form-row">
-                            <div class="col">
-                                <input type="text" class="form-control" id="nomtache" placeholder="Nom de la tache">
-                            </div>
-                            <div class="col">
-                                <input type="text" class="form-control" id="descriptiontache" placeholder="Description de la tache">
-                            </div>
-                            <div class="col">
-                                <input type="text" class="form-control" id="pointstache" placeholder="Points attribuer">
-                            </div>
-                            <div class="col">
-                                <button class="btn btn-outline-info">Créer</button>
-                            </div>
-                        </div>
-                    </form>
                 </div>
             </div>
         </div>
@@ -107,5 +91,6 @@
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
+        background-attachment: fixed;
     }
 </style>

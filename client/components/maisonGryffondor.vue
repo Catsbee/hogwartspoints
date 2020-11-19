@@ -92,5 +92,6 @@ module.exports = {
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
+        background-attachment: fixed;
     }
 </style>
