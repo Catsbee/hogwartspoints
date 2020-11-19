@@ -44,7 +44,6 @@
             <input type="number" v-model="tache.tachepoints">
             <button @click="newtache">Valider</button>
           </div>
-
         </div>
       </div>
       <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
