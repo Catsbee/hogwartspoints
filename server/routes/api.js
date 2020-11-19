@@ -291,11 +291,16 @@ router.get('/housepoints', async(req, res)=>{
     })
 })
 
-
-
-
-
-
-
+router.post('/getHouse', (async (req, res) => {
+    let input = {
+        userhouse : req.body.userhouse
+    }
+    let result = await client.query({
+        text : "select * from users where userhouse=$1 and prof=false",
+        values : [input.userhouse]
+    })
+    result = result.rows
+    res.json(result)
+}))
 
 module.exports = router

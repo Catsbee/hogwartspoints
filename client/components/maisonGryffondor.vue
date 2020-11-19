@@ -6,7 +6,6 @@
                     <h1>Chambre commune</h1>
                     <h3>Courage, Hardiesse, Force d'Esprit</h3>
                 </div>
-
             </div>
         </div>
         <div class="container ">
@@ -28,9 +27,10 @@
             </div>
         </div>
     </div>
-
-
 </template>
+<script>
+
+</script>
 <style>
     .changeGryffon{
         background-image:url("../assets/header_gryffodor.jpg");
