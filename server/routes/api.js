@@ -213,6 +213,18 @@ router.get('/getTache', async(req,res)=>{
     res.json(result.rows)
 })
 
+
+router.post('/getOneTache', async(req, res)=>{
+    let input = {
+        tacheid: req.body.tacheid
+    }
+    let result=await client.query({
+        text :'SELECT * FROM taches WHERE tacheid=$1',
+        values:[input.tacheid]
+    })
+    res.json(result.rows)
+})
+
 router.get('/housepoints', async(req, res)=>{
     let gryf = await client.query("SELECT * FROM users WHERE userhouse='Gryffondor'")
     let serd = await client.query("SELECT * FROM users WHERE userhouse='Serdaigle'")
@@ -278,6 +290,11 @@ router.get('/housepoints', async(req, res)=>{
             poufsouffle:poufPoint
     })
 })
+
+
+
+
+
 
 
 
