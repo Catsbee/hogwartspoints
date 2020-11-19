@@ -21,6 +21,22 @@
                             nous défendrons et défendrons vaillamment nos amis et nos proches contre tout ennemi.
                             Personne ne nous fait peur.</p>
                         <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                      <table class="table" id="tableTache">
+                        <thead class="thead-dark">
+                        <tr>
+                          <th scope="col">Rank</th>
+                          <th scope="col">Nom</th>
+                          <th scope="col">Points</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr v-for="(eleve, index) in students">
+                          <th scope="row">{{index + 1}}</th>
+                          <th scope="row">{{eleve.username}}</th>
+                          <th scope="row">{{eleve.total}}</th>
+                        </tr>
+                        </tbody>
+                      </table>
                     </div>
                 </div>
             </div>
@@ -28,6 +44,36 @@
     </div>
 
 </template>
+<script>
+module.exports = {
+  data(){
+    return {
+      students : []
+    }
+  },
+  async mounted(){
+    let student = await axios.post('/api/getHouse', {userhouse : "Poufsouffle"})
+    student = student.data
+    for (let i = 0; i < student.length; i++){
+      let total = await axios.post('/api/getUser', {userid : student[i].userid})
+      student[i]["total"] = total.data.total
+    }
+    for (let i = student.length - 1; i > 0; i--){
+      for(let j = 0; j < i; j++){
+        if (student[j].total < student[j+1].total){
+          let temp = student[j]
+          student[j] = student[j+1]
+          student[j+1] = temp
+        }
+      }
+    }
+    this.students = student
+  },
+  methods : {
+
+  }
+}
+</script>
 <style>
     .changePouf{
         background-image:url("../assets/header_poufsouffle.jpg");

@@ -38,7 +38,7 @@ var app = new Vue({
                 if (user)
                     location.replace('http://localhost:3000/?#/prof')
                 else
-                location.replace('http://localhost:3000/?#/pageperso')
+                location.replace('http://localhost:3000/?#/etudiant')
             }
             console.log(res)
         },

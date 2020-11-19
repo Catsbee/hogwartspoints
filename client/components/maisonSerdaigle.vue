@@ -22,7 +22,6 @@
                             bon nous semble et de dire ce que nous pensons. Les gens différents ne nous
                             impressionnent pas. Au contraire, nous savons les apprécier à leur juste valeur.</p>
                         <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-
                       <table class="table" id="tableTache">
                         <thead class="thead-dark">
                         <tr>
