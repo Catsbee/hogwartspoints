@@ -34,7 +34,7 @@
                     <div class="row">
                         <div class="card-group">
                             <div class="card">
-                                <img src="https://s2.qwant.com/thumbr/0x380/5/0/26dc918a664ee03e6b1c7f540ed7f748866657ae506d8cf3c633fb17202151/hufflepuff_transparent.png?u=https%3A%2F%2Fstatic.tvtropes.org%2Fpmwiki%2Fpub%2Fimages%2Fhufflepuff_transparent.png&q=0&b=1&p=0&a=1" class="card-img-top" alt="...">
+                                <img src="../assets/logo_poufsouffle.png" class="card-img-top" alt="...">
                                 <div class="card-body">
                                     <h5 class="card-title">Poufsouffle</h5>
                                     <p class="card-text">Equilibre, Loyauté, Constance, Patiance</p>
@@ -42,7 +42,7 @@
                                 </div>
                             </div>
                             <div class="card">
-                                <img src="https://s2.qwant.com/thumbr/0x380/e/9/5d96987e16737c558ca38874737148b1a10a2aeade37297d9aca900f3d897c/Serdaigle.png?u=http%3A%2F%2Funiversharrypotter.com%2Fwp-content%2Fuploads%2F2016%2F11%2FSerdaigle.png&q=0&b=1&p=0&a=1" class="card-img-top" alt="...">
+                                <img src="../assets/logo_serdaigle.png" class="card-img-top" alt="...">
                                 <div class="card-body">
                                     <h5 class="card-title">Serdaigle</h5>
                                     <p class="card-text">Sagesse, Discernement, Erudition, Curiosité</p>
@@ -50,7 +50,7 @@
                                 </div>
                             </div>
                             <div class="card">
-                                <img src="https://static.wikia.nocookie.net/harrypotter/images/d/d3/0.61_Slytherin_Crest_Transparent.png/revision/latest/scale-to-width-down/250?cb=20180701145136&path-prefix=nl" class="card-img-top" alt="...">
+                                <img src="../assets/logo_serpentard.png" class="card-img-top" alt="...">
                                 <div class="card-body">
                                     <h5 class="card-title">Serpentard</h5>
                                     <p class="card-text">Malice, Adresse, Détermination</p>
@@ -58,7 +58,7 @@
                                 </div>
                             </div>
                             <div class="card">
-                                <img src="https://s1.qwant.com/thumbr/0x0/2/2/a1d6c13b5d8f944f05d056b5be44717fd77a478e5b7fec207f124a6a1ee0a3/latest.jpg?u=http%3A%2F%2Fvignette1.wikia.nocookie.net%2Fharrypotter%2Fimages%2F2%2F28%2FGryffindor_ClearBG2.png%2Frevision%2Flatest%3Fcb%3D20160702234105&q=0&b=1&p=0&a=1" class="card-img-top" alt="...">
+                                <img src="../assets/logo_gryffondor.png" class="card-img-top" alt="...">
                                 <div class="card-body">
                                     <h5 class="card-title">Gryffondor</h5>
                                     <p class="card-text">Courage, Hardiesse, Force d'Esprit</p>
@@ -66,6 +66,21 @@
                                 </div>
                             </div>
                         </div>
+                    </div>
+                    <div>
+                        <br><br>
+                    </div>
+                    <div class="progress">
+                        <div class="progress-bar bg-success" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                    <div class="progress">
+                        <div class="progress-bar bg-info" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                    <div class="progress">
+                        <div class="progress-bar bg-warning" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                    <div class="progress">
+                        <div class="progress-bar bg-danger" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
                     </div>
                     <div>
                         <br><br>
@@ -91,7 +106,7 @@
                         </table>
                     </div>
                 </div>
-                <img src="https://64.media.tumblr.com/3c8bb0c0e29d03ea8a87275b8c8e1440/a4ffb58ec3edf49c-49/s1280x1920/05b14d885a08d7ebbbcbe8a42f3071e96e7d78f2.png" class="card-img-bottom" alt="...">
+                <img src="../assets/logo_allhouse.png" class="card-img-bottom" alt="...">
             </div>
 
 
@@ -138,7 +153,7 @@
 </script>
 <style>
     .change{
-        background-image:url("https://s2.qwant.com/thumbr/0x0/e/f/3f282dabe5bee77ca0c0f71861f563dbc2038f3b4da4fb4aa98dadb657b89c/hogwartsblog-1525112612664_1280w.jpg?u=http%3A%2F%2Fassets1.ignimgs.com%2F2018%2F04%2F30%2Fhogwartsblog-1525112612664_1280w.jpg&q=0&b=1&p=0&a=1");
+        background-image:url("../assets/header_homepage.jpg") ;
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
@@ -149,7 +164,7 @@
         text-shadow: #000000 1px 1px, #000000 -1px 1px, #000000 -1px -1px, #000000 1px -1px;
     }
     .home{
-        background-image: url("https://bdbulle.files.wordpress.com/2008/08/achtergrond.jpg");
+        background-image: url("../assets/fond_papyrus.jpg");
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;

@@ -84,7 +84,7 @@
 
 <style>
     .changePerso{
-        background-image:url("https://s2.qwant.com/thumbr/0x0/e/a/5a6f261357e3eaa647819600f3b6365603c03fc5d3fca0ab343c974248b238/thumb.png?u=http%3A%2F%2Fapi.thumbr.io%2Fb030257ea9fd7cede707d9bc07cfaa23%2FKhPZbWboUluRxv8PG87L%2Fhttps%3A%252F%252Fwww.freepik.com%2Fblog%2Fwp-content%2Fuploads%2F2016%2F11%2F01previa_stock.jpg%2F900x%2Fthumb.png&q=0&b=1&p=0&a=1");
+        background-image:url("../assets/header_etudiant.png");
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
@@ -95,7 +95,7 @@
         text-shadow: #000000 1px 1px, #000000 -1px 1px, #000000 -1px -1px, #000000 1px -1px;
     }
     .perso{
-        background-image: url("https://bdbulle.files.wordpress.com/2008/08/achtergrond.jpg");
+        background-image: url("../assets/fond_papyrus.jpg");
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;

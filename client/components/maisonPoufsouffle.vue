@@ -12,7 +12,7 @@
         <div class="container">
             <div class="row">
                 <div class="card mb-3">
-                    <img src="https://64.media.tumblr.com/8d0e9dc6912b7fa4a5f66e6346600a3f/47ca471d9500e35d-b9/s500x750/1ff668c1e22193b552bffe5c1e915031b0bac341.png" class="card-img-top" alt="...">
+                    <img src="../assets/dicton_poufsouffle.png" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">Bienvenue dans la chambre commune des Poufsouffle</h5>
                         <p class="card-text">Les Poufsouffle sont fidèles et dignes de confiance.
@@ -30,7 +30,7 @@
 </template>
 <style>
     .changePouf{
-        background-image:url("https://s1.qwant.com/thumbr/0x380/1/0/3d3c1970ca721ea53c70dec49827df99c66da41882943f5e93fae6e4f9f5ad/13103b3e663b0b061b160c6437bf526a.jpg?u=https%3A%2F%2Fs-media-cache-ak0.pinimg.com%2Foriginals%2F13%2F10%2F3b%2F13103b3e663b0b061b160c6437bf526a.jpg&q=0&b=1&p=0&a=1");
+        background-image:url("../assets/header_poufsouffle.jpg");
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
@@ -41,7 +41,7 @@
         text-shadow: #000000 1px 1px, #000000 -1px 1px, #000000 -1px -1px, #000000 1px -1px;
     }
     .poufsouffle{
-        background-image: url("https://wallpapercave.com/wp/PtJxpRl.jpg");
+        background-image: url("../assets/fond_poufsouffle.jpg");
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;

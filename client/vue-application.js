@@ -1,5 +1,5 @@
 const Home = window.httpVueLoader('./components/Home.vue')
-const Pageperso = window.httpVueLoader('./components/Pageperso.vue')
+const Pageperso = window.httpVueLoader('./components/etudiant.vue')
 const Register = window.httpVueLoader('./components/Register.vue')
 const Serdaigle = window.httpVueLoader('./components/maisonSerdaigle.vue')
 const Poufsouffle = window.httpVueLoader('./components/maisonPoufsouffle.vue')
@@ -9,7 +9,7 @@ const prof = window.httpVueLoader('./components/prof.vue')
 
 const routes = [
     { path: '/', component: Home},
-    { path: '/pageperso', component: Pageperso},
+    { path: '/etudiant', component: Pageperso},
     { path: '/register', component: Register},
     { path: '/maisonGryffondor', component: Gryffondor},
     { path: '/maisonSerpentard', component: Serpentard},

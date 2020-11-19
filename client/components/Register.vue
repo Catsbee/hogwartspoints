@@ -95,7 +95,7 @@
 
 <style>
     .changeReg{
-        background-image:url("https://s2.qwant.com/thumbr/0x0/4/d/8e6ec41e3a9a5c2deb7b8177cdaa966a09cc21babc57653a5df334f0a7b1c3/41782243poudlard2-7599a-png.png?u=http%3A%2F%2Fs1.e-monsite.com%2F2009%2F07%2F12%2F03%2F41782243poudlard2-7599a-png.png&q=0&b=1&p=0&a=1");
+        background-image:url("../assets/header_register.png");
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
@@ -106,7 +106,7 @@
         text-shadow: #000000 1px 1px, #000000 -1px 1px, #000000 -1px -1px, #000000 1px -1px;
     }
     .reg{
-        background-image:url("https://bdbulle.files.wordpress.com/2008/08/achtergrond.jpg");
+        background-image:url("../assets/fond_papyrus.jpg");
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
