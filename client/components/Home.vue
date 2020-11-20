@@ -66,17 +66,21 @@
                     <div>
                         <br><br>
                     </div>
-                    <div class="progress">
+                  <p class="text-success text-center">Serpentard {{housepoints.serpentard}}pts</p>
+                  <div class="progress mb-2">
                         <div class="progress-bar bg-success" role="progressbar" :style="{width : ((100*housepoints.serpentard)/maxpoints).toString()+'%'}" :aria-valuenow="housepoints.serpentard" aria-valuemin="0" :aria-valuemax="maxpoints">{{housepoints.serpentard}}</div>
                     </div>
-                    <div class="progress">
-                        <div class="progress-bar bg-info" role="progressbar" :style="{width : ((100*housepoints.serdaigle)/maxpoints).toString()+'%'}" :aria-valuenow="housepoints.serdaigle" aria-valuemin="0" :aria-valuemax="maxpoints">{{housepoints.serdaigle}}</div>
+                  <p class="text-info text-center">Serdaigle {{housepoints.serdaigle}}pts</p>
+                  <div class="progress mb-2">
+                      <div class="progress-bar bg-info" role="progressbar" :style="{width : ((100*housepoints.serdaigle)/maxpoints).toString()+'%'}" :aria-valuenow="housepoints.serdaigle" aria-valuemin="0" :aria-valuemax="maxpoints">{{housepoints.serdaigle}}</div>
                     </div>
-                    <div class="progress">
-                        <div class="progress-bar bg-warning" role="progressbar" :style="{width : ((100*housepoints.poufsouffle)/maxpoints).toString()+'%'}" :aria-valuenow="housepoints.poufsouffle" aria-valuemin="0" :aria-valuemax="maxpoints">{{housepoints.poufsouffle}}</div>
+                  <p class="text-warning text-center">Poufsouffle {{housepoints.poufsouffle}}pts</p>
+                  <div class="progress mb-2">
+                      <div class="progress-bar bg-warning" role="progressbar" :style="{width : ((100*housepoints.poufsouffle)/maxpoints).toString()+'%'}" :aria-valuenow="housepoints.poufsouffle" aria-valuemin="0" :aria-valuemax="maxpoints">{{housepoints.poufsouffle}}</div>
                     </div>
-                    <div class="progress">
-                        <div class="progress-bar bg-danger" role="progressbar" :style="{width : ((100*housepoints.gryffondor)/maxpoints).toString()+'%'}" :aria-valuenow="housepoints.gryffondor" aria-valuemin="0" :aria-valuemax="maxpoints">{{housepoints.gryffondor}}</div>
+                  <p class="text-danger text-center">Gryffondor {{housepoints.gryffondor}}pts</p>
+                  <div class="progress mb-2">
+                      <div class="progress-bar bg-danger" role="progressbar" :style="{width : ((100*housepoints.gryffondor)/maxpoints).toString()+'%'}" :aria-valuenow="housepoints.gryffondor" aria-valuemin="0" :aria-valuemax="maxpoints">{{housepoints.gryffondor}}</div>
                     </div>
                     <div>
                         <br><br>
